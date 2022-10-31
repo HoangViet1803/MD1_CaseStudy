@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>CodeGym</h3>
+<div class="kanban row">
+  <div class="backlog col status">
+    <h5><i class="fa-solid fa-list"></i> Backlog</h5>
+    <button type="button" class="btn-add" data-bs-toggle="modal" data-bs-target="#btn-add-backlog"><i
+            class="fa-solid fa-plus"></i> New
+    </button>
+    <!-- Modal button add -->
+    <div class="modal fade" id="btn-add-backlog" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="btn-add-backlog-modal">New task</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Task -->
+    <div class="task" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <span>Code2</span>
+      <i class="fa-solid fa-xmark i-close"></i>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" id="exampleModal" tabindex="-1"
+         aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-header-left">
+              <h1 class="modal-title fs-5" id="task-1">Code2</h1>
+              <p>Status: <span>Make a plan</span></p>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="time-counter">
+                <div>
+                  <label for="start-backlog-1">Start:</label>
+                  <input type="time" name="time" id="start-backlog-1">
+                </div>
+                <div>
+                  <label for="end-backlog-1">End:</label>
+                  <input type="time" name="time" id="end-backlog-1">
+                </div>
+              </div>
+              <div class="task-color">
+                <p>Color:</p>
+                <input type="radio" name="colors" id="green" checked>
+                <label for="green"></label>
+                <input type="radio" name="colors" id="yellow">
+                <label for="yellow"></label>
+                <input type="radio" name="colors" id="orange">
+                <label for="orange"></label>
+                <input type="radio" name="colors" id="red">
+                <label for="red"></label>
+              </div>
+              <p>Describe</p>
+              <textarea cols="78" rows="5" style="width: 100%"
+                        placeholder="Describe"></textarea>
+              <p>Note</p>
+              <textarea cols="78" rows="5" style="width: 100%" placeholder="Note"></textarea>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+            </button>
+            <button type="button" class="btn btn-primary" id="backlog-save">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="todo col status">
+    <h5><i class="fa-regular fa-circle"></i> To-do</h5>
+    <button type="button" class="btn-add" data-bs-toggle="modal" data-bs-target="#btn-add-todo"><i
+            class="fa-solid fa-plus"></i> New
+    </button>
+    <!-- Modal button add -->
+    <div class="modal fade" id="btn-add-todo" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="btn-add-todo-modal">New task</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="in-progress col status">
+    <h5><i class="fa-solid fa-spinner"></i> In progress</h5>
+    <button type="button" class="btn-add" data-bs-toggle="modal" data-bs-target="#btn-add-inProgress"><i
+            class="fa-solid fa-plus"></i> New
+    </button>
+    <!-- Modal button add -->
+    <div class="modal fade" id="btn-add-inProgress" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="btn-add-inProgress-modal">New task</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="complete col status">
+    <div class="header-col">
+      <h5><i class="fa-regular fa-circle-check"></i> Complete</h5>
+      <button class="btn-clear">Clear</button>
+    </div>
+    <button type="button" class="btn-add" data-bs-toggle="modal" data-bs-target="#btn-add-complete"><i
+            class="fa-solid fa-plus"></i> New
+    </button>
+    <!-- Modal button add -->
+    <div class="modal fade" id="btn-add-complete" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="btn-add-complete-modal">New task</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+
+
+<!-- Task -->
+<div class="task" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <span>Code2</span>
+  <i class="fa-solid fa-xmark i-close"></i>
+</div>
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" id="exampleModal" tabindex="-1"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-header-left">
+          <h1 class="modal-title fs-5" id="task-1">Code2</h1>
+          <p>Status: <span>Make a plan</span></p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="time-counter">
+            <div>
+              <label for="start-backlog-1">Start:</label>
+              <input type="time" name="time" id="start-backlog-1">
+            </div>
+            <div>
+              <label for="end-backlog-1">End:</label>
+              <input type="time" name="time" id="end-backlog-1">
+            </div>
+          </div>
+          <div class="task-color">
+            <p>Color:</p>
+            <input type="radio" name="colors" id="green" checked>
+            <label for="green"></label>
+            <input type="radio" name="colors" id="yellow">
+            <label for="yellow"></label>
+            <input type="radio" name="colors" id="orange">
+            <label for="orange"></label>
+            <input type="radio" name="colors" id="red">
+            <label for="red"></label>
+          </div>
+          <p>Describe</p>
+          <textarea cols="78" rows="5" style="width: 100%"
+                    placeholder="Describe"></textarea>
+          <p>Note</p>
+          <textarea cols="78" rows="5" style="width: 100%" placeholder="Note"></textarea>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+        </button>
+        <button type="button" class="btn btn-primary" id="backlog-save">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
